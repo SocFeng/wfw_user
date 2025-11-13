@@ -6,7 +6,7 @@ LocalEnv: true
 MaxBytes: 10485760  
 
 Auth:
-  AccessSecret: "Srtmsakd9EoCS2asz63mvaJrW52B726c"
+  AccessSecret: "ccccccc"
   AccessExpire: 86400
 
 Redis:
@@ -25,35 +25,15 @@ Executors:
 US3s:
   FileUpload:
     PublicKey: "TOKEN_7c6f06af-6e82-4a3a-98ec-f287890ed538"
-    PrivateKey: "3171a629-12a1-419d-8edc-738cc5dcbb58"
+    PrivateKey: "ccccccc"
     BucketHost: ""
-    BucketName: "wumitech-file-upload"
-    FileHost: "cn-gd.ufileos.com"
+    BucketName: "ccccccc"
+    FileHost: "ccccccc"
     VerifyUploadMD5: true
-    Endpoint: "https://wumitech-file-upload.cn-gd.ufileos.com"
+    Endpoint: "ccccccc"
 
 Rpcs:
   Proxycenter:
-    Target: 192.168.44.146:8998
-    Timeout: 0
-    NonBlock: true
-  PhoneBackendApi:
-    Target: phone-backend-api.phone-ad.svc.cluster.local:9532
-    Timeout: 60000
-    NonBlock: true
-  PhoneBackendApiHk:
-    Target: hk-phonead-phone-backend-api.cancer-ops.svc.cluster.local:9532
-    Timeout: 60000
-    NonBlock: true 
-  CancerRpc:
-    Target: cancer-rpc.spring.svc.cluster.local:8080
-    Timeout: 120000
-    NonBlock: true
-  CancerRpcHk:
-    Target: hk-cancer-rpc.cancer-ops.svc.cluster.local:8080
-    Timeout: 120000
-    NonBlock: true
-  SignalingInternal:
-    Target: 10.7.81.50:9090
-    Timeout: 60000
-    NonBlock: true
+    Target: ccccccc
+    Timeout: ccccccc
+    NonBlock: ccccccc
