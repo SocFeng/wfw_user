@@ -1,0 +1,25 @@
+import "common.api"
+
+@server (
+	group:  users
+	prefix: /api/v1/users
+)
+service users-api {
+
+	@handler getJsVersionTable
+    get /js_version returns (GetJsVersionTableResp)
+}
+
+type JsVersionTable{
+    Version string  `json:"version"`
+    Branch  string  `json:"branch"`
+    Note    string  `json:"note"`
+    RN      int64   `json:"rn"`
+    Id      int64   `json:"id"`
+}
+
+type GetJsVersionTableResp{
+    BaseResponse
+    Result []JsVersionTable `json:"result"`
+
+}

@@ -1,0 +1,59 @@
+Name: "users-api"
+Host: "0.0.0.0"
+Port: 8889
+Timeout: 0
+LocalEnv: true
+MaxBytes: 10485760  
+
+Auth:
+  AccessSecret: "Srtmsakd9EoCS2asz63mvaJrW52B726c"
+  AccessExpire: 86400
+
+Redis:
+  Host: 127.0.0.1
+  Port: 6379
+  Db: 9
+
+
+Databases:
+  Users: "root:123456@tcp(127.0.0.1:3306)/wfw_user?charset=utf8mb4&parseTime=true&loc=Local"
+Executors:
+  LoadRoleAuthorizations:
+    Interval: "10m"
+
+
+US3s:
+  FileUpload:
+    PublicKey: "TOKEN_7c6f06af-6e82-4a3a-98ec-f287890ed538"
+    PrivateKey: "3171a629-12a1-419d-8edc-738cc5dcbb58"
+    BucketHost: ""
+    BucketName: "wumitech-file-upload"
+    FileHost: "cn-gd.ufileos.com"
+    VerifyUploadMD5: true
+    Endpoint: "https://wumitech-file-upload.cn-gd.ufileos.com"
+
+Rpcs:
+  Proxycenter:
+    Target: 192.168.44.146:8998
+    Timeout: 0
+    NonBlock: true
+  PhoneBackendApi:
+    Target: phone-backend-api.phone-ad.svc.cluster.local:9532
+    Timeout: 60000
+    NonBlock: true
+  PhoneBackendApiHk:
+    Target: hk-phonead-phone-backend-api.cancer-ops.svc.cluster.local:9532
+    Timeout: 60000
+    NonBlock: true 
+  CancerRpc:
+    Target: cancer-rpc.spring.svc.cluster.local:8080
+    Timeout: 120000
+    NonBlock: true
+  CancerRpcHk:
+    Target: hk-cancer-rpc.cancer-ops.svc.cluster.local:8080
+    Timeout: 120000
+    NonBlock: true
+  SignalingInternal:
+    Target: 10.7.81.50:9090
+    Timeout: 60000
+    NonBlock: true
