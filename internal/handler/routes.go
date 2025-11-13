@@ -17,8 +17,18 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		[]rest.Route{
 			{
 				Method:  http.MethodGet,
+				Path:    "/get_test_user_one",
+				Handler: users.GetTestUserOneHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
 				Path:    "/js_version",
 				Handler: users.GetJsVersionTableHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/post_test_user_one",
+				Handler: users.PostTestUserTwoHandler(serverCtx),
 			},
 		},
 		rest.WithPrefix("/api/v1/users"),

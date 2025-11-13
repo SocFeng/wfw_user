@@ -2,3 +2,4 @@ type BaseResponse {
 	Code    int    `json:"code"`
 	Message string `json:"message"`
 }
+

@@ -5,21 +5,33 @@ import "common.api"
 	prefix: /api/v1/users
 )
 service users-api {
-
 	@handler getJsVersionTable
-    get /js_version returns (GetJsVersionTableResp)
+	get /js_version returns (GetJsVersionTableResp)
+
+	@handler getTestUserOne
+	get /get_test_user_one (TestUserReqOne) returns (GetJsVersionTableResp)
+
+	@handler postTestUserTwo
+	post /post_test_user_one (TestUserReqOne) returns (GetJsVersionTableResp)
 }
 
-type JsVersionTable{
-    Version string  `json:"version"`
-    Branch  string  `json:"branch"`
-    Note    string  `json:"note"`
-    RN      int64   `json:"rn"`
-    Id      int64   `json:"id"`
+// 添加一个get 带请求参数的请求 查询参数
+type TestUserReqOne {
+	UserId     int    `form:"userId,optional"`
+	UserName   string `form:"userName,optional"`
+	UserGender bool   `form:"userGender,optional"`
 }
 
-type GetJsVersionTableResp{
-    BaseResponse
-    Result []JsVersionTable `json:"result"`
-
+type JsVersionTable {
+	Version string `json:"version"`
+	Branch  string `json:"branch"`
+	Note    string `json:"note"`
+	RN      int64  `json:"rn"`
+	Id      int64  `json:"id"`
 }
+
+type GetJsVersionTableResp {
+	BaseResponse
+	Result []JsVersionTable `json:"result"`
+}
+

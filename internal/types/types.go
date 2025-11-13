@@ -20,3 +20,9 @@ type JsVersionTable struct {
 	RN      int64  `json:"rn"`
 	Id      int64  `json:"id"`
 }
+
+type TestUserReqOne struct {
+	UserId     int    `form:"userId,optional"`
+	UserName   string `form:"userName,optional"`
+	UserGender bool   `form:"userGender,optional"`
+}
