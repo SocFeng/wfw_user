@@ -31,14 +31,14 @@ service users-api {
 // Form
 type AboutTestFormReq {
 	Id        int    `form:"id"`
-	AboutTest string `form:"aboutTest`
+	AboutTest string `form:"aboutTest"`
 }
 
 // Json field xxxxx is not set
 // get 请求 不能使用 json类型来接收数据
 type AboutTestJsonReq {
 	Id        int    `json:"id"`
-	AboutTest string `json:"aboutTest`
+	AboutTest string `json:"aboutTest"`
 }
 
 // GET

@@ -14,7 +14,9 @@ install-goctl-openapi3:
 swagger: genFile := gen/swagger/operation.swagger.json
 swagger:
 	#goctl api format -dir apis
+	# 生成 swagger.json 文件
 	goctl api plugin -plugin goctl-openapi3="openapi -filename $(genFile)" -api apis/apis.api -dir .
+	# 配置认证信息
 	sed -i '' s'/^  "components": {/  "components": {\n    "securitySchemes": {"bearerAuth": {"type": "http","scheme": "bearer","bearerFormat": "JWT"}},/' gen/swagger/operation.swagger.json
 	sed -i '' s'/^  "components": {/  "security": [{"bearerAuth":[]}],\n  "components": {/' gen/swagger/operation.swagger.json
 

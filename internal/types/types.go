@@ -10,12 +10,12 @@ type AboutTestAllResp struct {
 
 type AboutTestFormReq struct {
 	Id        int    `form:"id"`
-	AboutTest string `form:"aboutTest`
+	AboutTest string `form:"aboutTest"`
 }
 
 type AboutTestJsonReq struct {
 	Id        int    `json:"id"`
-	AboutTest string `json:"aboutTest`
+	AboutTest string `json:"aboutTest"`
 }
 
 type BaseResponse struct {

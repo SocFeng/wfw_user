@@ -1,0 +1,377 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "paths": {
+    "/api/v1/users/about_get_form_user": {
+      "get": {
+        "operationId": "aboutGetTestFormReq",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form"
+          },
+          {
+            "name": "aboutTest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AboutTestAllResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    },
+    "/api/v1/users/about_get_json_user": {
+      "get": {
+        "operationId": "aboutGetTestJsonReq",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "aboutTest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AboutTestAllResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    },
+    "/api/v1/users/about_post_form_user": {
+      "post": {
+        "operationId": "aboutPostTestFormReq",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form"
+          },
+          {
+            "name": "aboutTest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AboutTestAllResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    },
+    "/api/v1/users/about_post_json_user": {
+      "post": {
+        "operationId": "aboutPostTestJsonReq",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "aboutTest"
+                ],
+                "properties": {
+                  "aboutTest": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AboutTestAllResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    },
+    "/api/v1/users/get_test_user_one": {
+      "get": {
+        "operationId": "getTestUserOne",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form"
+          },
+          {
+            "name": "userName",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form"
+          },
+          {
+            "name": "userGender",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "style": "form"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetJsVersionTableResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    },
+    "/api/v1/users/js_version": {
+      "get": {
+        "operationId": "getJsVersionTable",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetJsVersionTableResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    },
+    "/api/v1/users/post_test_user_one": {
+      "post": {
+        "operationId": "postTestUserTwo",
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "style": "form"
+          },
+          {
+            "name": "userGender",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            },
+            "style": "form"
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            },
+            "style": "form"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetJsVersionTableResp"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users-api"
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AboutTestAllResp": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "aboutString"
+            ],
+            "properties": {
+              "aboutString": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          }
+        ]
+      },
+      "BaseResponse": {
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "GetJsVersionTableResp": {
+        "allOf": [
+          {
+            "type": "object",
+            "required": [
+              "result"
+            ],
+            "properties": {
+              "result": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/JsVersionTable"
+                }
+              }
+            }
+          },
+          {
+            "$ref": "#/components/schemas/BaseResponse"
+          }
+        ]
+      },
+      "JsVersionTable": {
+        "type": "object",
+        "required": [
+          "version",
+          "branch",
+          "note",
+          "rn",
+          "id"
+        ],
+        "properties": {
+          "branch": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string"
+          },
+          "rn": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "users-api"
+    }
+  ]
+}
