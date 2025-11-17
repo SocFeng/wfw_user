@@ -17,6 +17,26 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 		[]rest.Route{
 			{
 				Method:  http.MethodGet,
+				Path:    "/about_get_form_user",
+				Handler: users.AboutGetTestFormReqHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
+				Path:    "/about_get_json_user",
+				Handler: users.AboutGetTestJsonReqHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/about_post_form_user",
+				Handler: users.AboutPostTestFormReqHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/about_post_json_user",
+				Handler: users.AboutPostTestJsonReqHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodGet,
 				Path:    "/get_test_user_one",
 				Handler: users.GetTestUserOneHandler(serverCtx),
 			},

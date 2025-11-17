@@ -3,6 +3,21 @@
 
 package types
 
+type AboutTestAllResp struct {
+	BaseResponse
+	AboutString string `json:"aboutString"`
+}
+
+type AboutTestFormReq struct {
+	Id        int    `form:"id"`
+	AboutTest string `form:"aboutTest`
+}
+
+type AboutTestJsonReq struct {
+	Id        int    `json:"id"`
+	AboutTest string `json:"aboutTest`
+}
+
 type BaseResponse struct {
 	Code    int    `json:"code"`
 	Message string `json:"message"`

@@ -13,6 +13,45 @@ service users-api {
 
 	@handler postTestUserTwo
 	post /post_test_user_one (TestUserReqOne) returns (GetJsVersionTableResp)
+
+	@handler aboutGetTestFormReq
+	get /about_get_form_user (AboutTestFormReq) returns (AboutTestAllResp)
+
+	@handler aboutGetTestJsonReq
+	get /about_get_json_user (AboutTestJsonReq) returns (AboutTestAllResp)
+
+	@handler aboutPostTestFormReq
+	post /about_post_form_user (AboutTestFormReq) returns (AboutTestAllResp)
+
+	@handler aboutPostTestJsonReq
+	post /about_post_json_user (AboutTestJsonReq) returns (AboutTestAllResp)
+}
+
+// get 的请求参数 两种形式那种可以成功
+// Form
+type AboutTestFormReq {
+	Id        int    `form:"id"`
+	AboutTest string `form:"aboutTest`
+}
+
+// Json field xxxxx is not set
+// get 请求 不能使用 json类型来接收数据
+type AboutTestJsonReq {
+	Id        int    `json:"id"`
+	AboutTest string `json:"aboutTest`
+}
+
+// GET
+// 只能使用 form 接收参数 不能使用 json
+
+// POST
+// form 和 json 都可以用来接收参数
+// form 传入参数的是 form-data
+// json 传入参数的是 json
+
+type AboutTestAllResp {
+	BaseResponse
+	AboutString string `json:"aboutString"`
 }
 
 // 添加一个get 带请求参数的请求 查询参数
